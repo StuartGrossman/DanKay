@@ -25,14 +25,17 @@ app.use(bodyParser.json());
 app.get('/', function(req, res) {
 	res.render('index');
 });
-app.get('/webProfolio', function(req, res) {
-	res.render('webProfolio');
+app.get('/what-we-offer', function(req, res) {
+	res.render('what-we-offer');
 });
-app.get('/mobilGallery', function(req, res){
-	res.render('mobilGallery')
+app.get('/our-specialists', function(req, res){
+	res.render('our-specialists')
 })
-app.get('/profile', function(req, res){
-	res.render('profile')
+app.get('/contact-us', function(req, res){
+	res.render('contact-us')
+})
+app.get('/about-us', function(req, res){
+	res.render('about-us')
 })
 
 var server = app.listen(port, function() {
