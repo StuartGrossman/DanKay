@@ -357,22 +357,22 @@
 
 		<script>
 			function google_maps_5530ed1be74e5() {
-				var latlng = new google.maps.LatLng(-33.8710, 151.2039);
+				var latlng = new google.maps.LatLng(38.834068, -104.818902);
 				var myOptions = {
-					zoom : 13,
+					zoom : 16,
 					center : latlng,
 					mapTypeId : google.maps.MapTypeId.ROADMAP,
 					styles : [{
 						"featureType" : "road",
 						"elementType" : "labels",
 						"stylers" : [{
-							"visibility" : "off"
+							"visibility" : "on"
 						}]
 					}, {
 						"featureType" : "poi",
 						"elementType" : "labels",
 						"stylers" : [{
-							"visibility" : "off"
+							"visibility" : "on"
 						}]
 					}, {
 						"featureType" : "transit",
@@ -389,7 +389,6 @@
 				var map = new google.maps.Map(document.getElementById("google-map-area-5530ed1be74e5"), myOptions);
 				var marker = new google.maps.Marker({
 					position : latlng,
-					icon : "../img/home_lawyer_pin.png",
 					map : map
 				});
 			}

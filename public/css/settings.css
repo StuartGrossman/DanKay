@@ -10,7 +10,9 @@ author:		themepunch
 email:     	info@themepunch.com
 website:   	http://www.themepunch.com
 -----------------------------------------------------------------------------*/
-
+h4{
+	color:black;
+}
 
 @font-face {
   font-family: 'revicons';
