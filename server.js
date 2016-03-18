@@ -2,6 +2,7 @@ var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
 var app = express();
+var nodemailer = require('nodemailer');
 var port = process.env.PORT || 3000;
 
 
@@ -42,3 +43,25 @@ var server = app.listen(port, function() {
 	var host = server.address().address;
 	console.log('Example app listening at http://localhost:' + port);
 });
+
+//mail service
+
+// create reusable transporter object using the default SMTP transport
+// var transporter = nodemailer.createTransport('smtps://user%40gmail.com:pass@smtp.gmail.com');
+
+// // setup e-mail data with unicode symbols
+// var mailOptions = {
+//     from: '"Fred Foo 👥" <foo@blurdybloop.com>', // sender address
+//     to: 'grossman.stuart1@gmail.com, baz@blurdybloop.com', // list of receivers
+//     subject: 'Message Recieved ✔', // Subject line
+//     text: 'Thanks for sending us a message 🐴', // plaintext body
+//     html: '<b>Message Recieved 🐴</b>' // html body
+// };
+
+// // send mail with defined transport object
+// transporter.sendMail(mailOptions, function(error, info){
+//     if(error){
+//         return console.log(error);
+//     }
+//     console.log('Message sent: ' + info.response);
+// });
