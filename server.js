@@ -29,8 +29,8 @@ app.get('/', function(req, res) {
 app.get('/what-we-offer', function(req, res) {
 	res.render('what-we-offer');
 });
-app.get('/our-specialists', function(req, res){
-	res.render('our-specialists')
+app.get('/reviews', function(req, res){
+	res.render('reviews')
 })
 app.get('/contact-us', function(req, res){
 	res.render('contact-us')
