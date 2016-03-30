@@ -7,11 +7,7 @@ var myJqueryAlias = jQuery.noConflict();
     			postedBy: 'Manuel',
     			review: 'Dan Kay has helped me out so much with two personal injury cases making sure I walked away without having to pay for any medical bill and got me treated as well as making sure I got payed for time off pain and suffering and his staff are amazing'
     		},
-    		{
-    			title: 'Excellent Lawyer, Great Team, Wonderful Results',
-    			postedBy: 'Geri',
-    			review: 'From my first meeting with Daniel Kay I recognized his legal expertise, and was greatly relieved to have him handling my case. He was able to analyze the situation immediately and knew exactly what needed to be done. He kept me in the loop at all times, answering all my emails and phone calls in a timely manner. <br><br> He is extremely efficient and so is his staff. Good team, good results. Daniel handled my case with great legal clarity, strength, resolve, and determination to win an appropriate settlement for me. <br><br> For anyone contemplating the need for an excellent attorney, I highly recommend Daniel G. Kay, Attorney at Law. You wont be disappointed.'
-    		},
+    		
     		{
     			title: 'Totally Satisfied',
     			postedBy: 'Client',
@@ -31,6 +27,11 @@ var myJqueryAlias = jQuery.noConflict();
     			title: 'Thanks you Dan',
     			postedBy: 'Savannah',
     			review: "Me and my daughter had gotten into a bad car accident. We did not know what to do when I lost my job, but a friend recommended a lawyer Dan Kay. Dan Kay took care of everything my medical bills and kept demanding more money from the other insurance and I got a great settlement and now me and my daughters can buy home Thank you so much!"
+    		},
+    		{
+    			title: 'Excellent Lawyer, Great Team, Wonderful Results',
+    			postedBy: 'Geri',
+    			review: 'From my first meeting with Daniel Kay I recognized his legal expertise, and was greatly relieved to have him handling my case. He was able to analyze the situation immediately and knew exactly what needed to be done. He kept me in the loop at all times, answering all my emails and phone calls in a timely manner. <br><br> He is extremely efficient and so is his staff. Good team, good results. Daniel handled my case with great legal clarity, strength, resolve, and determination to win an appropriate settlement for me. <br><br> For anyone contemplating the need for an excellent attorney, I highly recommend Daniel G. Kay, Attorney at Law. You wont be disappointed.'
     		},
     		{
     			title: 'Dan Saved Me',
