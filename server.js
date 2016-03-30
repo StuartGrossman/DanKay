@@ -35,8 +35,8 @@ app.get('/reviews', function(req, res){
 app.get('/contact-us', function(req, res){
 	res.render('contact-us')
 })
-app.get('/about-us', function(req, res){
-	res.render('about-us')
+app.get('/about', function(req, res){
+	res.render('about')
 })
 
 var server = app.listen(port, function() {
