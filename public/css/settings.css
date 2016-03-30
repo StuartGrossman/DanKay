@@ -13,6 +13,9 @@ website:   	http://www.themepunch.com
 h4{
 	color:white;
 }
+.star {
+	color: #021542;
+}
 
 @font-face {
   font-family: 'revicons';

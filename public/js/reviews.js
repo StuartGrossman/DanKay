@@ -1,8 +1,9 @@
-$( document ).ready(function() {
-    // var reviews = $('#reviews_box');
+var myJqueryAlias = jQuery.noConflict();
+ myJqueryAlias( document ).ready(function() {
+    // var reviews =  myJqueryAlias('#reviews_box');
        var reviews_array = [
     		{
-    			title : 'Manny',
+    			title : 'Thank you Dan',
     			postedBy: 'Manuel',
     			review: 'Dan Kay has helped me out so much with two personal injury cases making sure I walked away without having to pay for any medical bill and got me treated as well as making sure I got payed for time off pain and suffering and his staff are amazing'
     		},
@@ -17,17 +18,17 @@ $( document ).ready(function() {
     			review: "I was injured in a car accident and the other company offered very little compensation and refused to budge. Mr. Kay persisted and got the full amount. I couldn't have been happier. His staff was friendly, helpful and efficient every time I called. Overall, I couldn't have asked for a better experience."
     		},
     		{
-    			title: 'Awesome attorney!',
+    			title: 'Awesome attorney',
     			postedBy: 'Eric',
     			review: "I came to Dan Kay when I was involved in a motor vehicle accident. With a free consultation, Dan was able to answer and my questions and took care of me!!! I highly recommend this attorney! -Eric"
     		},
     		{
-    			title: 'Car accident need help and advice',
+    			title: 'Car accident need help and advice, Dan came through',
     			postedBy: 'Paula',
     			review: "I was involved in car accident that was not my fault and had trouble with the insurance company with the person that hit me. Was really helpful and positive on my case. I told Him what was going on and he helped me step by step with the case."
     		},
     		{
-    			title: 'Thanks you Dan!',
+    			title: 'Thanks you Dan',
     			postedBy: 'Savannah',
     			review: "Me and my daughter had gotten into a bad car accident. We did not know what to do when I lost my job, but a friend recommended a lawyer Dan Kay. Dan Kay took care of everything my medical bills and kept demanding more money from the other insurance and I got a great settlement and now me and my daughters can buy home Thank you so much!"
     		},
@@ -37,12 +38,12 @@ $( document ).ready(function() {
     			review: "Words can not explain. I mean this was my first accident and had no clue of what to do what was going to happen. And he made everything clear for to understand and know what was going on with the case. Also keeping me very involved. And being there to assist me with any and every question and or concerns I had. And I must say I was more then surprised by the end result. Let's just say I got more then expected. And that's always good. Mr Dan kay is and has been the best Lawyer for the case. Very professional very knowledgeable and trustworthy."
     		},
     		{
-    			title: 'David',
+    			title: 'Much appreciated David',
     			postedBy: 'David Sussman',
     			review: "I was arrested on a misdemeanor . The court system wanted me to plea to a charge in which I was innocent . David Margrave referred this case to Mr Kay . It was truly stressful but in the end Danny Kay fought like little Mike Tyson and within 10 minutes of fighting the D A dropped its case !!!!!!! Retain this man !!!! Worth every penny !!!!! I also had a domestic dispute with Rubi my wife and he got that dismissed !!!!!!! Retain This Man"
     		},
     		{
-    			title: 'Cynthia Norris',
+    			title: 'Thanks you Dan , from Cynthia Norris',
     			postedBy: 'Cynthia',
     			review: "Daniel Kay Has Been Our Family Attorney For Many Years. He Is Very Personable And We Trust Him With All Legal Issue That May Arise. His Confidence And Respect Amongst His Peers Is Admirable. I High Recommend Dan And Have Referred Him To Others."
     		},
@@ -69,45 +70,73 @@ $( document ).ready(function() {
     	]
 
 		var count = 0; 
-
+		var time = 10000
     	reviewSlider(reviews_array, count);
     	changeSlides();
     	function changeSlides(){
-    		setTimeout(function() {
-    			count = count + 1
-    			reviewSlider(reviews_array, count)
-    			if(count < reviews_array.length - 1){
-    				changeSlides();
-    			}
+    		// setTimeout(function() {
+    		// 	count = count + 1
+    		// 	fadeOut();
+    		// 	fadeIn();
+    		// 	reviewSlider(reviews_array, count)
+    		// 	if(count < reviews_array.length - 1){
+    		// 		changeSlides();
+    		// 	}
     			
-    		}, 10000);
+    		// }, time);
+			count = count + 1
+    			fadeOut();
+    			fadeIn();
+    			reviewSlider(reviews_array, count)
     	}
     	
 
+    	function fadeOut(){
+    		myJqueryAlias('#title').fadeOut(100);
+
+		    myJqueryAlias('#postedBy').fadeOut(100);
+
+		    myJqueryAlias('#review').fadeOut(100);
+
+		    myJqueryAlias('#stars').fadeOut(100);
+
+    	}
+    	function fadeIn(){
+    		myJqueryAlias('#title').fadeIn(2000);
+
+    		myJqueryAlias('#stars').fadeIn(2000);
+
+		    myJqueryAlias('#postedBy').fadeIn(2000);
+
+		    myJqueryAlias('#review').fadeIn(2000);
+    	}
+
 		function reviewSlider(array, index){
-		
-		    	$('#title').html(array[index].title);
+				fadeIn();
+		    	 myJqueryAlias('#title').html(array[index].title);
 
-		    	$('#postedBy').html(array[index].postedBy);
+		    	 myJqueryAlias('#postedBy').html(array[index].postedBy);
 
-		    	$('#review').html('<i>' + array[index].review + '</i>');
+		    	 myJqueryAlias('#review').html('<i>' + array[index].review + '</i>');
 		    
 		}
 
-		$('#back').on('click', function(e) {
+		 myJqueryAlias('#back').on('click', function(e) {
 			console.log('clicked back button');
 			if(count > 0){
 				count = count - 1;
 			}
+			fadeOut();
 			reviewSlider(reviews_array, count);
 			
 		});
 
-		$('#forward').on('click', function(e) {
+		 myJqueryAlias('#forward').on('click', function(e) {
 			console.log('clicked foward button');
 			if(count < reviews_array.length - 1){
 				count = count + 1;
 			}
+			fadeOut();
 			reviewSlider(reviews_array, count);
 			
 		});
