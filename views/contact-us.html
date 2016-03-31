@@ -4,7 +4,8 @@
 <!--[if IE 8]><html class="no-js lt-ie10 lt-ie9"> <![endif]-->
 <!--[if IE 9]><html class="no-js lt-ie10"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js">
+<html class="no-js" ng-app="app">
+<meta charset="utf-8">
 	<!--<![endif]-->
 	<head>
 
@@ -44,44 +45,7 @@
 						<div class="container">
 							<div class="column one">
 								<!-- Header - contact info area-->
-				<ul class="contact_details">
-									<li class="slogan">
-										
-									</li>
-									<li class="phone">
-										<i class="icon-phone"></i><a href="(719)635-3611">+61 383 766 284</a>
-									</li>
-									<li class="mail">
-										<i class="icon-mail-line"></i><a href="mailto:noreply@envato.com">noreply@envato.com</a>
-									</li>
-								</ul>
-								<!--Social info area-->
-				<ul class="social">
-									<li class="skype">
-										<a href="#" title="Skype"><i class="icon-skype"></i></a>
-									</li>
-									<li class="facebook">
-										<a href="#" title="Facebook"><i class="icon-facebook"></i></a>
-									</li>
-									<li class="googleplus">
-										<a href="#" title="Google+"><i class="icon-gplus"></i></a>
-									</li>
-									<li class="twitter">
-										<a href="#" title="Twitter"><i class="icon-twitter"></i></a>
-									</li>
-									<li class="vimeo">
-										<a href="#" title="Vimeo"><i class="icon-vimeo"></i></a>
-									</li>
-									<li class="youtube">
-										<a href="#" title="YouTube"><i class="icon-play"></i></a>
-									</li>
-									<li class="flickr">
-										<a href="#" title="Flickr"><i class="icon-flickr"></i></a>
-									</li>
-									<li class="linkedin">
-										<a href="#" title="LinkedIn"><i class="icon-linkedin"></i></a>
-									</li>
-								</ul>
+								
 							</div>
 						</div>
 					</div>
@@ -92,7 +56,7 @@
 								<div class="top_bar_left clearfix">
 									<!-- Logo-->
 									<div class="logo">
-										<a id="logo" href="../" title="BeLawyer - BeTheme"><img class="logo-main scale-with-grid" src="../img/lawyer.png" 	alt="BeLawyer - BeTheme" /><img class="logo-sticky scale-with-grid" src="../img/lawyer.png" alt="" /></a>
+										<a id="logo" href="../" title="BeLawyer - BeTheme"><img class="logo-main scale-with-grid" src="../img/Danielkay.png" 	alt="BeLawyer - BeTheme" /><img class="logo-sticky scale-with-grid" src="../img/Danielkay.png" alt="" /></a>
 									</div>
 									<!-- Main menu-->
 						<div class="menu_wrapper">
@@ -108,7 +72,7 @@
 													<a href="../what-we-offer"><span>What we offer</span></a>
 												</li>
 												<li >
-													<a href="../reviews"><span>Reviews</span></a>
+													<a href="../#reviews"><span>Reviews</span></a>
 												</li>
 												<li class="current_page_item">
 													<a href="#"><span>Contact us</span></a>
@@ -152,34 +116,34 @@
 										<!-- One Fourth (1/4) Column -->
 						<div class="column one-fourth column_column ">
 											<div class="column_attr " >
-												<h3>BeLawyer</h4>
+												<h3>Daniel G Kay</h4>
 												<p class="big">
-													Level 13, 2 Elizabeth St,
+													318 E.Pike Peak Ave 
 													<br />
-													Melbourne, Victoria 3000
+													Colorado Springs, 
 													<br />
-													Australia
+													CO 80903
 												</p>
 												<table>
 													<tr>
-														<td>Mon-Fri</td><td><b>10:00</b> a.m.</td><td><b>10:30</b> p.m.</td>
+														<td>Mon-Fri</td><td><b>8:00</b> a.m.</td><td><b>5:00</b> p.m.</td>
 													</tr>
 													<tr>
-														<td>Sat</td><td><b>11:00</b> a.m.</td><td><b>11:00</b> p.m.</td>
+														<td>Sat</td><td><b>9:00</b> a.m.</td><td><b>5:00</b> p.m.</td>
 													</tr>
 													<tr>
-														<td>Sun</td><td><b>10:30</b> a.m.</td><td><b>10:00</b> p.m.</td>
+														<td>Sun</td><td><b>closed</b></td><td><b>closed</b></td>
 													</tr>
 												</table>
 											</div>
 										</div>
 										<!-- One Second (1/2) Column -->
-					<div class="column one-second column_column ">
-											<div class="column_attr " >
+										<div class="column one-second column_column">
+											<div class="column_attr " ng-controller="MailSenderController as vm">
 												<h3>Send us a message</h4>
 												<div class="wpcf7" id="wpcf7-f43-p36-o1" lang="en-US" dir="ltr">
 													<div class="screen-reader-response"></div>
-													<form name="" action="#" method="post" class="wpcf7-form" novalidate="novalidate">
+													<form name="" class="wpcf7-form" novalidate="novalidate" ng-submit="vm.sendMail()">
 														<div style="display: none;">
 															<input type="hidden" name="_wpcf7" value="43" />
 															<input type="hidden" name="_wpcf7_version" value="4.1.1" />
@@ -188,41 +152,46 @@
 															<input type="hidden" name="_wpnonce" value="9a88b9cc25" />
 														</div>
 														<!-- One Second (1/2) Column -->
-					<div class="column one-second">
+														<div class="column one-second">
 															<span class="wpcf7-form-control-wrap your-name">
-																<input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Your name" />
+																<input ng-model="vm.mail.name"type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Your name" />
 															</span>
 														</div>
 														<!-- One Second (1/2) Column -->
-					<div class="column one-second">
+														<div class="column one-second">
 															<span class="wpcf7-form-control-wrap your-email">
-																<input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Your e-mail" />
+																<input ng-model="vm.mail.email"type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" placeholder="Your e-mail" />
 															</span>
 														</div>
 														<div class="column one">
 															<span class="wpcf7-form-control-wrap your-subject">
-																<input type="text" name="your-subject" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" placeholder="Subject" />
+																<input ng-model="vm.mail.subject"type="text" name="your-subject" value="" size="40" class="wpcf7-form-control wpcf7-text" placeholder="Subject" />
 															</span>
 														</div>
 														<div class="column one">
-															<span class="wpcf7-form-control-wrap your-message"> 																<textarea name="your-message" cols="40" rows="4" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Message"></textarea></span>
+															<span class="wpcf7-form-control-wrap your-message"> 						
+																<textarea ng-model="vm.mail.message" cols="40" rows="4" class="wpcf7-form-control wpcf7-textarea" placeholder="Message"></textarea>
+															</span>
 														</div>
 														<div class="column one">
-															<input type="submit" value="Send a message" class="wpcf7-form-control wpcf7-submit" />
-														</div><div class="wpcf7-response-output wpcf7-display-none"></div>
+															<input  type="submit" value="Send a message" class="wpcf7-form-control wpcf7-submit" />
+														</div>
+														<div class="">
+
+														</div>
 													</form>
 												</div>
 											</div>
 										</div>
 										<!-- One Fourth (1/4) Column -->
-						<div class="column one-fourth column_column ">
+										<div class="column one-fourth column_column ">
 											<div class="column_attr " >
 												<h3>You are welcome</h4>
 												<p class="big">
-													Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis.
+													Thank you for contacting the law offices of Daniel G Kay. We will try and respond to your message as soon as possible. 
 												</p>
 												<p>
-													Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
+													If you need to speak to a attonery immeditly please call us at (719) 635-3611 or send us a fax at (719) 635-5544. Thanks 
 												</p>
 											</div>
 										</div>
@@ -233,9 +202,9 @@
 								<div class="section_wrapper clearfix">
 									<div class="items_group clearfix">
 										<!-- One full width row-->
-				<div class="column one column_column ">
+										<div class="column one column_column ">
 											<div class="column_attr align_center" >
-												<h2 style="margin: 0; color: #825339;">Call us +61 (0) 3 8376 6284</h2>
+												<h2 style="margin: 0; color: #825339;">Call us + (719) 635-3611</h2>
 											</div>
 										</div>
 									</div>
@@ -245,11 +214,11 @@
 								<div class="section_wrapper clearfix">
 									<div class="items_group clearfix">
 										<!-- One full width row-->
-				<div class="column one column_map ">
+										<div class="column one column_map ">
 
 											<!-- Google map area -->
-						<div class="google-map-wrapper no_border">
-												<div class="google-map" id="google-map-area-5530ed1be74e5" style="width:100%; height:500px;">
+												<div class="google-map-wrapper no_border">
+												<div class="google-map" id="map" style="width:100%; height:500px;">
 													&nbsp;
 												</div>
 											</div>
@@ -267,151 +236,103 @@
 				</div>
 			</div>
 			<!-- Footer-->
-			<footer id="Footer" class="clearfix">
-				<div class="widgets_wrapper">
-					<div class="container">
-						<!-- One Third (1/3) Column -->
-			<div class="column one-third">
-							<!-- Text Area -->
-				<aside id="text-2" class="widget widget_text">
-								<h4>Bibendum auctor</h4>
-								<div class="textwidget">
-									Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque.
-								</div>
-							</aside>
-						</div>
-						<!-- One Third (1/3) Column -->
-			<div class="column one-third">
-							<!-- Text Area -->
-				<aside id="text-3" class="widget widget_text">
-								<h4>Aliquam erat</h4>
-								<div class="textwidget">
-									Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet.
-								</div>
-							</aside>
-						</div>
-						<!-- One Third (1/3) Column -->
-			<div class="column one-third">
-							<!-- Text Area -->
-				<aside id="text-4" class="widget widget_text">
-								<h4> Nullam wisi</h4>
-								<div class="textwidget">
-									Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In hendrerit nulla quam nunc, accumsan congue. Lorem ipsum primis in nibh vel risus. Sed vel lectus.
-								</div>
-							</aside>
-						</div>
-					</div>
-				</div>
-				<!-- Footer copyright-->
-			<div class="footer_copy">
-					<div class="container">
-						<div class="column one">
-							<a id="back_to_top" href="#" class="button button_left button_js"><span class="button_icon"><i class="icon-up-open-big"></i></span></a>
-							<div class="copyright">
-								&copy; 2015 BeLawyer - BeTheme. All Rights Reserved. <a target="_blank" rel="nofollow" href="http://themeforest.net/user/beantownthemes/portfolio?ref=BeantownThemes">Beantownthemes</a>
-							</div>
-							<!--Social info area-->
-				<ul class="social">
-								<li class="skype">
-									<a href="#" title="Skype"><i class="icon-skype"></i></a>
-								</li>
-								<li class="facebook">
-									<a href="#" title="Facebook"><i class="icon-facebook"></i></a>
-								</li>
-								<li class="googleplus">
-									<a href="#" title="Google+"><i class="icon-gplus"></i></a>
-								</li>
-								<li class="twitter">
-									<a href="#" title="Twitter"><i class="icon-twitter"></i></a>
-								</li>
-								<li class="vimeo">
-									<a href="#" title="Vimeo"><i class="icon-vimeo"></i></a>
-								</li>
-								<li class="youtube">
-									<a href="#" title="YouTube"><i class="icon-play"></i></a>
-								</li>
-								<li class="flickr">
-									<a href="#" title="Flickr"><i class="icon-flickr"></i></a>
-								</li>
-								<li class="linkedin">
-									<a href="#" title="LinkedIn"><i class="icon-linkedin"></i></a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</footer>
+		<footer id="Footer" class="clearfix">
+            <div class="widgets_wrapper">
+                <div class="container">
+                    <!-- One Third (1/3) Column -->
+                    <div class="column one-third">
+                        <!-- Text Area -->
+                        <aside id="text-2" class="widget widget_text">
+                            <h4></h4>
+                            <div class="textwidget">
+                                Law Firms and Law Offices in Colorado Springs, CO
+                                Legal Services Office
+                            </div>
+                        </aside>
+                    </div>
+                    <!-- One Third (1/3) Column -->
+                    <div class="column one-third">
+                        <!-- Text Area -->
+                        <aside id="text-3" class="widget widget_text">
+                            <h4></h4>
+                            <div class="textwidget">
+                                Call today for your free Consultation<br>
+                                Phone: (719) 635-3611
+                                Fax: (719) 635-5544
+                            </div>
+                        </aside>
+                    </div>
+                    <!-- One Third (1/3) Column -->
+                    <div class="column one-third">
+                        <!-- Text Area -->
+                        <aside id="text-4" class="widget widget_text">
+                            <h4></h4>
+                            <div class="textwidget">
+                                
+                                318 E.Pike Peak Ave
+                                Colorado Springs, CO 80903
+                                
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer copyright-->
+            <div class="footer_copy">
+                <div class="container">
+                    <div class="column one">
+                        <a id="back_to_top" href="#" class="button button_left button_js"><span class="button_icon"><i class="icon-up-open-big"></i></span></a>
+                        <div class="copyright">
+                            &copy; 2015 BeLawyer - BeTheme. Edits & Development by Stuart Grossman - <a href="https://www.codingstew.net" target="_blank"><i class="fa fa-sitemap fa-lg" style="color:white;"></i></a>
+                        </div>
+                        <!--Social info area-->
+                        <ul class="social">
+                            <!-- <li class="skype">
+                                <a href="#" title="Skype"><i class="icon-skype"></i></a>
+                            </li> -->
+                            <li class="facebook">
+                                <a href="#" title="Facebook"><i class="icon-facebook"></i></a>
+                            </li>
+                            <li class="googleplus">
+                                <a href="#" title="Google+"><i class="icon-gplus"></i></a>
+                            </li>
+                           <!--  <li class="twitter">
+                                <a href="#" title="Twitter"><i class="icon-twitter"></i></a>
+                            </li>
+                            <li class="vimeo">
+                                <a href="#" title="Vimeo"><i class="icon-vimeo"></i></a>
+                            </li>
+                            <li class="youtube">
+                                <a href="#" title="YouTube"><i class="icon-play"></i></a>
+                            </li>
+                            <li class="flickr">
+                                <a href="#" title="Flickr"><i class="icon-flickr"></i></a>
+                            </li> -->
+                            <li class="linkedin">
+                                <a href="#" title="LinkedIn"><i class="icon-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
 		</div>
 
 		<!-- JS -->
-
-		<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
-
-		<script type="text/javascript" src="../js/mfn.menu.js"></script>
-		<script type="text/javascript" src="../js/jquery.plugins.js"></script>
-		<script type="text/javascript" src="../js/jquery.jplayer.min.js"></script>
-		<script type="text/javascript" src="../js/animations.js"></script>
-		<script type="text/javascript" src="../js/scripts.js"></script>
-
-		<script type='text/javascript' src='http://maps.google.com/maps/api/js?sensor=false&amp;ver=5.9'></script>
-
-		<script>
-			function google_maps_5530ed1be74e5() {
-				var latlng = new google.maps.LatLng(38.834068, -104.818902);
-				var myOptions = {
-					zoom : 16,
-					center : latlng,
-					mapTypeId : google.maps.MapTypeId.ROADMAP,
-					styles : [{
-						"featureType" : "road",
-						"elementType" : "labels",
-						"stylers" : [{
-							"visibility" : "on"
-						}]
-					}, {
-						"featureType" : "poi",
-						"elementType" : "labels",
-						"stylers" : [{
-							"visibility" : "on"
-						}]
-					}, {
-						"featureType" : "transit",
-						"elementType" : "labels.text",
-						"stylers" : [{
-							"visibility" : "off"
-						}]
-					}],
-					zoomControl : true,
-					mapTypeControl : false,
-					streetViewControl : false,
-					scrollwheel : false
-				};
-				var map = new google.maps.Map(document.getElementById("google-map-area-5530ed1be74e5"), myOptions);
-				var marker = new google.maps.Marker({
-					position : latlng,
-					map : map
-				});
-			}
-
-
-			jQuery(document).ready(function($) {
-				google_maps_5530ed1be74e5();
-			});
-		</script>
+		<script
+     		 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAR4uInfVhGOVQPhgf8wkvxHpiEEYerVq8">
+    	</script>
+    	<script type="text/javascript" src="../js/googlemap.js"></script>
+		<script type="text/javascript" src="../angular/angular.js"></script>
 		<script type="text/javascript">
-			jQuery(window).load(function() {
-				var retina = window.devicePixelRatio > 1 ? true : false;
-				if (retina) {
-					var retinaEl = jQuery("#logo img.logo-main");
-					var retinaLogoW = retinaEl.width();
-					var retinaLogoH = retinaEl.height();
-					retinaEl.attr("src", "../img/retina-lawyer.png").width(retinaLogoW).height(retinaLogoH);
-					var stickyEl = jQuery("#logo img.logo-sticky");
-					var stickyLogoW = stickyEl.width();
-					var stickyLogoH = stickyEl.height();
-					stickyEl.attr("src", "../img/retina-lawyer.png").width(stickyLogoW).height(stickyLogoH);
-				}
-			});
+			var myApp = angular.module('app', []);
 		</script>
+		<script type="text/javascript" src="../js/route.js"></script>
+		
+
+		<script type="text/javascript" src="../js/factorys/HomeFactory.js"></script>
+		<script type="text/javascript" src="../js/controllers/MailSenderController.js"></script>
+		
+
 	</body>
 </html>
