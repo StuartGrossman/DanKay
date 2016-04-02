@@ -442,6 +442,7 @@ table tr:hover td {
 @media only screen and (max-width: 767px) {
 	#Top_bar, #Action_bar {
 		background: #ffffff !important;
+		font-size:0;
 	}
 }
 /*
