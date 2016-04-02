@@ -5,7 +5,7 @@ var config = require('../config.json');
 router.post('/', function(req, res){
 	console.log('route hit')
 	var mail = req.body;
-	console.log(req.body)
+	console.log(config.api_key)
 	
 	var sendgrid  = require('sendgrid')(config.api_key);
 		sendgrid.send({
