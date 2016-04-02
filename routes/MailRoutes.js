@@ -8,7 +8,7 @@ router.post('/', function(req, res){
 	var key = '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'
 	var sendgrid  = require('sendgrid')(key);
 		sendgrid.send({
-		  to:       'dankaypc@qwestoffice.net',
+		  to:       'grossman.stuart1@gmail.com',
 		  from:     req.body.email,
 		  subject:  req.body.subject,
 		  text:     req.body.message
