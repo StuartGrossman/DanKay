@@ -136,7 +136,9 @@ var myJqueryAlias = jQuery.noConflict();
 			console.log('clicked foward button');
 			if(count < reviews_array.length - 1){
 				count = count + 1;
-			}
+			}else{
+                count = 0;
+            }
 			fadeOut();
 			reviewSlider(reviews_array, count);
 			
