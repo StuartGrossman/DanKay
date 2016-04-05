@@ -10,9 +10,12 @@ myJqueryAlias( document ).ready(function() {
 
     })
 	myJqueryAlias('#button2Charity').on('click', function(){
-        myJqueryAlias('.charity').fadeOut(1000);
         myJqueryAlias('#button2Charity').fadeOut(1000);
-        myJqueryAlias('#buttonCharity').fadeIn(2000);
+        myJqueryAlias('.charity').fadeOut(1000, function(){
+             myJqueryAlias('#buttonCharity').fadeIn(2000);
+        });
+        
+       
 
     })
 });
