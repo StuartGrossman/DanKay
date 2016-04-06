@@ -2,8 +2,8 @@
 
 
 config.json
-/node_modules
+
 /bower_components
 
 push-server.json
-MailRoutes.js
+

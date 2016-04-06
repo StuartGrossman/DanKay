@@ -87,8 +87,9 @@ var myJqueryAlias = jQuery.noConflict();
     		// }, time);
 			count = count + 1
     			fadeOut();
-    			fadeIn();
+
     			reviewSlider(reviews_array, count)
+    			
     	}
     	
 
@@ -103,13 +104,14 @@ var myJqueryAlias = jQuery.noConflict();
 
     	}
     	function fadeIn(){
-    		myJqueryAlias('#title').fadeIn(2000);
+    		myJqueryAlias('#title').fadeIn(1000);
 
-    		myJqueryAlias('#stars').fadeIn(2000);
+    		myJqueryAlias('#stars').fadeIn(1000);
 
-		    myJqueryAlias('#postedBy').fadeIn(2000);
+		    myJqueryAlias('#postedBy').fadeIn(1000);
 
-		    myJqueryAlias('#review').fadeIn(2000);
+		    myJqueryAlias('#review').fadeIn(1000);
+            
     	}
 
 		function reviewSlider(array, index){
