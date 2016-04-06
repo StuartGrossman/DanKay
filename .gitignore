@@ -6,3 +6,4 @@ config.json
 /bower_components
 
 push-server.json
+MailRoutes.js
